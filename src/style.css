@@ -47,8 +47,15 @@
   font-size: 20px;
   position: relative;
   top: -20px;
+  margin-left: -10px;
+}
+#celsiusLink {
   text-decoration: none;
-  margin-left: 5px;
+  color: black;
+}
+#fahrenheitLink {
+  text-decoration: none;
+  color: black;
 }
 .feelLike {
   margin-left: 35px;
