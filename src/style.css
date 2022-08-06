@@ -35,7 +35,7 @@
 .extraInfo {
   text-align: center;
   list-style: none;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 li {
   display: inline;
@@ -51,4 +51,8 @@ li {
   border-radius: 10px;
   height: 40px;
   box-shadow: 0px 0px 25px -10px #65565f;
+}
+.btn {
+  background-color: #65565f;
+  border-color: #65565f;
 }
