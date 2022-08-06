@@ -1,5 +1,3 @@
-.container {
-}
 .withinCircle {
   position: fixed;
   border: 1px solid white;
@@ -17,6 +15,7 @@
 }
 .city {
   font-size: 30px;
+  text-align: center;
 }
 .countryID {
   font-size: 30px;
@@ -45,6 +44,7 @@ li {
   display: block;
   margin: 0 auto;
   text-align: center;
+  margin-top: 5px;
 }
 .search-bar {
   width: 350px;
