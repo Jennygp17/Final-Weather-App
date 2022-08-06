@@ -1,5 +1,54 @@
 .container {
-  max-width: 900px;
-  border: 2px solid black;
-  border-radius: 20px;
+}
+.withinCircle {
+  position: fixed;
+  border: 1px solid white;
+  background-color: white;
+  opacity: 85%;
+  margin-left: 10%;
+  padding: 50px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 25px -10px #65565f;
+  width: 800px;
+  height: 800px;
+}
+.topHalf {
+  margin-left: 40px;
+}
+.city {
+  font-size: 30px;
+}
+.countryID {
+  font-size: 30px;
+}
+.temp {
+  font-size: 40px;
+  margin-left: 65px;
+  font-weight: bolder;
+}
+.feelLike {
+  margin-left: 50px;
+}
+.description {
+  margin-top: 100px;
+}
+.extraInfo {
+  text-align: center;
+  list-style: none;
+  margin-top: 20px;
+}
+li {
+  display: inline;
+  padding: 10px;
+}
+#formInput {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.search-bar {
+  width: 350px;
+  border-radius: 10px;
+  height: 40px;
+  box-shadow: 0px 0px 25px -10px #65565f;
 }

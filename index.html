@@ -42,49 +42,61 @@
           </button>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm">
-          <form id="formInput">
-            <input
-              type="text"
-              id="enterCity"
-              placeholder="Enter City"
-              autofocus
-              class="search-bar"
-            />
-            <button type="submit" class="btn btn-primary" id="userInfo">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-            <button type="submit" class="btn btn-primary" id="cLocat">
-              <i class="fa-solid fa-location-dot"></i>
-            </button>
-          </form>
+      <div class="withinCircle">
+        <br />
+        <br />
+        <br />
+        <div class="row topHalf">
+          <div class="col-8 searchedInfo">
+            <span class="city">Manchester</span> ,
+            <span class="countryID">GB</span>
+            <div class="todaysDate">
+              Last updated - <span class="day">Saturday</span><span> </span
+              ><span class="time">14:32</span>
+            </div>
+            <div class="temp">19<span>°</span></div>
+            <div class="feelLike">
+              Feel like: <span class="fLike">21</span>°
+            </div>
+          </div>
+          <div class="col-4 image">
+            <img src="#" />
+            <div class="description">Cloudy</div>
+          </div>
         </div>
-      </div>
-      <div class="todaysDate">
-        Last updated - <span class="day">Saturday</span><span> </span
-        ><span class="time">14:32</span>
+        <ul class="extraInfo">
+          <li class="wind">
+            <strong>Wind speed</strong> | <span class="wSpeed">2</span>m/s
+          </li>
+          <li class="humidity">
+            <strong>Humidity</strong> | <span class="hum">54</span>%
+          </li>
+          <li class="sunRise">
+            <strong>Sunrise</strong> | <span class="sRise">05:30</span>
+          </li>
+          <li class="sunSet">
+            <strong>Sunset</strong> | <span class="sSet">19:30</span>
+          </li>
+        </ul>
+        <hr />
         <div class="row">
-          <div class="col-9 searchedInfo">
-              <span class="city">Manchester</span> ,
-              <span class="countryID">GB</span>
-              <div class="temp">19<span>°</span></div>
-              <div>Feel like: <span class="fLike">21</span>°</div>
-            </div>
-            <div class="col-3 image">
-              <img src="#">
-              <div class="description">Cloudy</div>
-            </div>
-          <ul class="extraInfo">
-            <li class="wind">Wind speed | <span class="wSpeed">2</span>m/s</li>
-            <li class="humidity">Humidity | <span class="hum">54</span>%</li>
-            <li class="sunRise">Sunrise | <span class="sRise">05:30</span></li>
-            <li class="sunSet">Sunset | <span class="sSet">19:30</span></li>
-          </ul>  
-          <br/>
-        <hr/>
-
-      </div>
+          <div class="col-sm">
+            <form id="formInput">
+              <input
+                type="text"
+                id="enterCity"
+                placeholder="Enter City"
+                autofocus
+                class="search-bar"
+              />
+              <button type="submit" class="btn btn-primary" id="userInfo">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+              <button type="submit" class="btn btn-primary" id="cLocat">
+                <i class="fa-solid fa-location-dot"></i>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
