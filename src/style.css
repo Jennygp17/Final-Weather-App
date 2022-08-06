@@ -40,7 +40,7 @@
 }
 .temp {
   font-size: 50px;
-  margin-left: 55px;
+  margin-left: 45px;
   font-weight: bolder;
 }
 .units {
@@ -48,6 +48,7 @@
   position: relative;
   top: -20px;
   text-decoration: none;
+  margin-left: 5px;
 }
 .feelLike {
   margin-left: 35px;
