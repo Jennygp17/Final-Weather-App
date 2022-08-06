@@ -39,7 +39,7 @@
   margin-left: 20px;
 }
 .temp {
-  font-size: 40px;
+  font-size: 50px;
   margin-left: 55px;
   font-weight: bolder;
 }
@@ -52,9 +52,14 @@
 .feelLike {
   margin-left: 35px;
 }
+#icon {
+  width: 150px;
+  height: 150px;
+  margin-top: 15px;
+}
 .description {
-  margin-top: 25px;
-  margin-left: 10px;
+  margin-top: -20px;
+  margin-left: 50px;
 }
 .description:first-letter {
   text-transform: capitalize;
