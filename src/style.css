@@ -4,18 +4,31 @@
   background-color: white;
   opacity: 85%;
   margin-left: 10%;
+  margin-top: 15px;
   padding: 50px;
   border-radius: 50%;
   box-shadow: 0px 0px 25px -10px #65565f;
   width: 800px;
   height: 800px;
 }
+.frequent-cities {
+  position: fixed;
+  width: 1500px;
+  margin-top: 5px;
+}
+#my-video {
+  position: fixed;
+  margin-top: -25px;
+  right: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+}
 .topHalf {
   margin-left: 40px;
 }
 .city {
   font-size: 30px;
-  text-align: center;
+  margin-left: 15px;
 }
 .countryID {
   font-size: 30px;
@@ -29,7 +42,11 @@
   margin-left: 50px;
 }
 .description {
-  margin-top: 100px;
+  margin-top: 25px;
+  margin-left: 10px;
+}
+.description:first-letter {
+  text-transform: capitalize;
 }
 .extraInfo {
   text-align: center;

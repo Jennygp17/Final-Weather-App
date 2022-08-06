@@ -19,6 +19,13 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
+    <video autoplay muted loop id="my-video">
+      <source src="Media/cloudy.mp4" type="video/mp4" id="partly-cloudy" />
+      <source src="Media/cloudy.mp4" type="video/mp4" id="cloudy" />
+      <source src="Media/raining.mp4" type="video/mp4" id="rain" />
+      <source src="Media/sunny.mp4" type="video/mp4" id="clear" />
+      <source src="Media/snow.mp4" type="video/mp4" id="snow" />
+    </video>
     <div class="container">
       <div class="row frequent-cities">
         <div class="col-3">
@@ -47,7 +54,7 @@
         <br />
         <br />
         <div class="row topHalf">
-          <div class="col-8 searchedInfo">
+          <div class="col-7 searchedInfo">
             <span id="city" class="city">Manchester</span>,
             <span id="countryID">GB</span>
             <div class="todaysDate">
@@ -57,11 +64,11 @@
               <span class="tempNum" id="tempNum">19</span><span>°</span>
             </div>
             <div class="feelLike">
-              Feel like: <span class="fLike" id="fLike">21</span>°
+              Feels like: <span class="fLike" id="fLike">21</span>°
             </div>
           </div>
-          <div class="col-4 image">
-            <img src="#" />
+          <div class="col-5 image">
+            <img src="#" alt="Clear" id="icon" />
             <div class="description" id="description">Cloudy</div>
           </div>
         </div>
