@@ -34,9 +34,11 @@ function displayTemp(response) {
   let description = document.querySelector("#description");
   let iconElement = document.querySelector("#icon");
 
+  celsiusTemperture = response.data.main.temp;
+
   cityElement.innerHTML = response.data.name;
   countryIDElement.innerHTML = response.data.sys.country;
-  tempElement.innerHTML = Math.round(response.data.main.temp);
+  tempElement.innerHTML = Math.round(celsiusTemperture);
   fLikeElement.innerHTML = Math.round(response.data.main.feels_like);
   wSpeed.innerHTML = Math.round(response.data.wind.speed);
   hum.innerHTML = response.data.main.humidity;
@@ -59,7 +61,25 @@ function searchCity(event) {
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
   axios.get(apiURL).then(displayTemp);
 }
+//unit change - fahrenheit
+function showFahrenheit(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#tempNum");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemp = (celsiusTemperture * 9) / 5 + 32;
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
+}
 
+//unit change - celsius
+function showCelsius(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let tempElement = document.querySelector("#tempNum");
+  tempElement.innerHTML = Math.round(celsiusTemperture);
+}
+let celsiusTemperture = null;
 //London
 function firstButton(event) {
   event.preventDefault();
@@ -131,6 +151,12 @@ nyButton.addEventListener("click", thirdButton);
 let sydneyButton = document.querySelector("#sydBut");
 sydneyButton.addEventListener("click", fourthButton);
 
+let celsiusLink = document.querySelector("#celsiusLink");
+celsiusLink.addEventListener("click", showCelsius);
+
+let fahrenheitLink = document.querySelector("#fahrenheitLink");
+fahrenheitLink.addEventListener("click", showFahrenheit);
+
 function changeVideo(backgroundWeather) {
   let vid = document.querySelector("#my-video");
   if (backgroundWeather == "Clear") {
@@ -146,4 +172,3 @@ function changeVideo(backgroundWeather) {
     vid.src = "Media/snow.mp4";
   }
 }
-searchCity("London");
