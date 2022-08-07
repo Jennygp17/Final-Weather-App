@@ -23,12 +23,14 @@ todaysDate.innerHTML = `${day}, ${hour}:${minute}`;
 
 function displayForecast() {
   let forecastElement = document.querySelector("#weatherForecast");
-  let days = ["Sunday", "Monday", "Tuesday", "Wednesday"];
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
   let forecastHTML = `<div class="row">`;
   days.forEach(function (day) {
-    forecastHTML = forecastHTML`
+    forecastHTML =
+      forecastHTML +
+      `
                   <div class="col-2">
-            <div class="weekDay">Sunday</div>
+            <div class="weekDay">${day}</div>
             <img src="Media/sun.png" alt="sunny" id="image" width="70px" />
             <div class="temps">
               High | 19°</div>
