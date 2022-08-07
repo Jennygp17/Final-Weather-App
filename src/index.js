@@ -21,7 +21,8 @@ if (minute < 10) {
 }
 todaysDate.innerHTML = `${day}, ${hour}:${minute}`;
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response);
   let forecastElement = document.querySelector("#weatherForecast");
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
   let forecastHTML = `<div class="row">`;
@@ -41,6 +42,15 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+//forecast API
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "7387c1649b2acfa22815e197a7100ba0";
+  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiURL).then(displayForecast);
+}
+
+//searchedcity information
 function displayTemp(response) {
   console.log(response);
   let cityElement = document.querySelector("#city");
@@ -71,16 +81,17 @@ function displayTemp(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
   changeVideo(response.data.weather[0].main);
+  getForecast(response.data.coord);
 }
 //search city
 function searchCity(event) {
   event.preventDefault();
   let city = document.querySelector("#enterCity").value;
   let apiKey = "7387c1649b2acfa22815e197a7100ba0";
-  let unit = "metric";
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiURL).then(displayTemp);
 }
+
 //unit change - fahrenheit
 function showFahrenheit(event) {
   event.preventDefault();
@@ -100,6 +111,7 @@ function showCelsius(event) {
   tempElement.innerHTML = Math.round(celsiusTemperture);
 }
 let celsiusTemperture = null;
+
 //London
 function firstButton(event) {
   event.preventDefault();
@@ -154,7 +166,7 @@ function findLocation(event) {
   navigator.geolocation.getCurrentPosition(handlePosition);
 }
 let button = document.querySelector("#cLocat");
-let cLocation = button.addEventListener("click", findLocation);
+button.addEventListener("click", findLocation);
 
 let submit = document.querySelector("#userInfo");
 submit.addEventListener("click", searchCity);
@@ -192,4 +204,3 @@ function changeVideo(backgroundWeather) {
     vid.src = "Media/snow.mp4";
   }
 }
-displayForecast();
