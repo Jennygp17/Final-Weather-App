@@ -21,6 +21,24 @@ if (minute < 10) {
 }
 todaysDate.innerHTML = `${day}, ${hour}:${minute}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#weatherForecast");
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML = forecastHTML`
+                  <div class="col-2">
+            <div class="weekDay">Sunday</div>
+            <img src="Media/sun.png" alt="sunny" id="image" width="70px" />
+            <div class="temps">
+              High | 19°</div>
+              <div class="lTemps">Low | 13°</div>
+            </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemp(response) {
   console.log(response);
   let cityElement = document.querySelector("#city");
@@ -172,3 +190,4 @@ function changeVideo(backgroundWeather) {
     vid.src = "Media/snow.mp4";
   }
 }
+displayForecast();
